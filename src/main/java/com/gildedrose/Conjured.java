@@ -7,15 +7,17 @@ public class Conjured extends Item {
 
     @Override
     void update() {
-        if (quality > 0) {
-            quality = quality - 2;
-        }
+        decrementQuality();
+        decrementQuality();
+        decrementSellin();
+        updateExpired();
+    }
 
-        sellIn = sellIn - 1;
+    @Override
+    void updateExpired() {
         if (sellIn < 0) {
-            if (quality > 0) {
-                quality = quality - 2;
-            }
+            decrementQuality();
+            decrementQuality();
         }
     }
 }

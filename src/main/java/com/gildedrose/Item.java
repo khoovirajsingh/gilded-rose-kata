@@ -49,14 +49,14 @@ public class Item {
         }
     }
 
-    @Override
-    public String toString() {
-        return this.name + ", " + this.sellIn + ", " + this.quality;
-    }
-
-    protected void incrementQuality() {
+    void incrementQuality() {
         if (quality < 50) {
             quality++;
         }
+    }
+
+    @Override
+    public String toString() {
+        return this.name + ", " + this.sellIn + ", " + this.quality;
     }
 }
