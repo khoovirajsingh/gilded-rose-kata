@@ -1,6 +1,6 @@
 package com.gildedrose;
 
-public class Conjured extends Item {
+class Conjured extends Item {
     Conjured(int sellIn, int quality) {
         super("Conjured", sellIn, quality);
     }

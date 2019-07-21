@@ -2,9 +2,9 @@ package com.gildedrose;
 
 public class Item {
 
-    public String name;
-    public int sellIn;
-    public int quality;
+    String name;
+    int sellIn;
+    int quality;
 
     Item(String name, int sellIn, int quality) {
         this.name = name;
@@ -12,7 +12,7 @@ public class Item {
         this.quality = quality;
     }
 
-    public static Item createItem(String name, int sellIn, int quality) {
+    static Item createItem(String name, int sellIn, int quality) {
         switch (name) {
             case "Aged Brie":
                 return new AgedBrie(sellIn, quality);
@@ -34,7 +34,7 @@ public class Item {
     }
 
     void updateExpired() {
-        if (sellIn < 0) {
+        if (isExpired()) {
             decrementQuality();
         }
     }
@@ -55,12 +55,12 @@ public class Item {
         }
     }
 
+    boolean isExpired() {
+        return sellIn < 0;
+    }
+
     @Override
     public String toString() {
         return this.name + ", " + this.sellIn + ", " + this.quality;
-    }
-
-    protected boolean isExpired() {
-        return sellIn < 0;
     }
 }
