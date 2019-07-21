@@ -22,7 +22,12 @@ public class BackstagePass extends Item {
             }
         }
 
-        sellIn = sellIn - 1;
+        decrementSellin();
+        updateExpired();
+    }
+
+    @Override
+    void updateExpired() {
         if (sellIn < 0) {
             quality = 0;
         }
