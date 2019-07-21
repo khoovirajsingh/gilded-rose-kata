@@ -53,4 +53,10 @@ public class Item {
     public String toString() {
         return this.name + ", " + this.sellIn + ", " + this.quality;
     }
+
+    protected void incrementQuality() {
+        if (quality < 50) {
+            quality++;
+        }
+    }
 }
