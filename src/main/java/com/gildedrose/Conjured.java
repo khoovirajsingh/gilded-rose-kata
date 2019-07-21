@@ -21,7 +21,4 @@ public class Conjured extends Item {
         }
     }
 
-    private boolean isExpired() {
-        return sellIn < 0;
-    }
 }
