@@ -23,3 +23,4 @@ jobs:
     steps:
       - checkout
       - run: mvn test
+      - run: mvn sonar:sonar -Dsonar.projectKey=khoovirajsingh_gilded-rose-kata -Dsonar.organization=khoovirajsingh -Dsonar.host.url=https://sonarcloud.io Dsonar.login=2b161e0fc11913660d09c1e0f5f730e616881a03
