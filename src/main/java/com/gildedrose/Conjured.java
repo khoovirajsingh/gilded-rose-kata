@@ -15,9 +15,13 @@ public class Conjured extends Item {
 
     @Override
     void updateExpired() {
-        if (sellIn < 0) {
+        if (isExpired()) {
             decrementQuality();
             decrementQuality();
         }
+    }
+
+    private boolean isExpired() {
+        return sellIn < 0;
     }
 }
