@@ -6,11 +6,14 @@ import org.junit.Test;
 public class GildedRoseTest {
     @Test
     public void updateQuality() {
+        String[] item = {"foo", "Aged Brie", "Backstage passes to a TAFKAL80ETC concert", "Sulfuras, Hand of Ragnaros"};
+        Integer[] sellIn = {-1, 0, 6, 11};
+        Integer[] quality = {0, 49, 50};
         CombinationApprovals.verifyAllCombinations(
                 this::doUpdateQuality,
-                new String[]{"foo", "Aged Brie", "Backstage passes to a TAFKAL80ETC concert", "Sulfuras, Hand of Ragnaros"},
-                new Integer[]{0},
-                new Integer[]{0}
+                item,
+                sellIn,
+                quality
         );
     }
 
