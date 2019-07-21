@@ -6,6 +6,6 @@ public class Sulfurus extends Item {
     }
 
     @Override
-    void doUpdateQuality() {
+    void update() {
     }
 }

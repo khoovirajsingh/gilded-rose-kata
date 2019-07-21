@@ -6,7 +6,7 @@ public class BackstagePass extends Item {
     }
 
     @Override
-    void doUpdateQuality() {
+    void update() {
         if (quality < 50) {
             quality = quality + 1;
             if (sellIn < 11) {
